@@ -35,4 +35,12 @@ public class Categoria {
 
     }
 
+    @JsonIgnore
+    @Override
+    public String toString() {
+        return "Categoria{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
 }
