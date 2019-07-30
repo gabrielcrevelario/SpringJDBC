@@ -16,6 +16,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	compile 'org.apache.poi:poi:3.15'
+	compile 'org.apache.poi:poi-ooxml:3.15'
+	compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.1'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'mysql:mysql-connector-java'

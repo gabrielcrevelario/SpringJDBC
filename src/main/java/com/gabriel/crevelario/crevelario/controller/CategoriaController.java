@@ -26,20 +26,7 @@ public class CategoriaController {
     private static boolean ENABLE;
     @Value("${spring.mail.properties.mail.smtp.ssl.enable}")
     private static boolean SSL;
-/*
-    SimpleMailMessage message = new SimpleMailMessage();
- JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
-        message.setTo("gabriel_crevelario@hotmail.com");
-        message.setFrom("3461e969cf97c2");
-        message.setSubject("testeeee");
-        message.setText(categoria.toString());
 
-        javaMailSender.setPassword("a421c47f9b8c5a");
-        javaMailSender.setUsername("3461e969cf97c2");
-        javaMailSender.setPort(2525);
-        javaMailSender.setHost("smtp.mailtrap.io");
-        javaMailSender.send(message);
-*/
     @Autowired
     private CategoriaRepository categoriaRepository;
 
@@ -49,8 +36,9 @@ public class CategoriaController {
 
     @GetMapping
     public List<Categoria> listar() {
-        return categoriaRepository.findAll();
-    }
+       return categoriaRepository.findAll();
+    };
+
 
     @GetMapping("/id/{id}")
     public Categoria getById(@PathVariable long id) {
@@ -58,5 +46,7 @@ public class CategoriaController {
         Categoria categoria = categoriaRepository.getById(id);
         return categoria;
     }
+
+
 
 }
